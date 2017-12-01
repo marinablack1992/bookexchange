@@ -86,8 +86,17 @@ passport.deserializeUser(function (id, done) { //everytime the user wants to go 
         }).catch(err => console.log('deserialize failed', err))
 })
 
-app.post('/api/addbook', ctrl.addBook);
 app.get('/api/getbooks', ctrl.getBooks);
+app.get('/api/book/:id', ctrl.getBook);
+app.get('/api/usercart/:id', ctrl.getUserCart)
+
+app.post('/api/addbook', ctrl.addBook);
+
+app.delete('/api/deletebook/:id', ctrl.deleteBook)
+
+app.post('/api/addcart/:bookid/:userid', ctrl.addToCart)
+
+app.put('/api/updatestock/:bookid', ctrl.updateStock)
 
 const PORT = 3005;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
