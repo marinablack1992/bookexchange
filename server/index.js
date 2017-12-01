@@ -6,6 +6,7 @@ const massive = require('massive');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const cors = require('cors');
+const ctrl = require('./controller.js')
 
 const app = express();
 
@@ -84,6 +85,9 @@ passport.deserializeUser(function (id, done) { //everytime the user wants to go 
             done(null, user[0]); // takes user object from database and puts it on req.user. we can use it on any endpoint now.
         }).catch(err => console.log('deserialize failed', err))
 })
+
+app.post('/api/addbook', ctrl.addBook);
+app.get('/api/getbooks', ctrl.getBooks);
 
 const PORT = 3005;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
