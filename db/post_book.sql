@@ -1,2 +1,2 @@
-insert into books (title, author, img, instock, description)
-values ($1, $2, $3, $4, true, $5)
+insert into books (title, author, img, instock, description, genre)
+values ('Harry Potter and the Chamber of Secrets', 'J.K Rowling', 'https://images-na.ssl-images-amazon.com/images/I/51jNORv6nQL.jpg', true, 'The second book in the Harry Potter series.', 'Teen Fantasy')
