@@ -52,5 +52,13 @@ module.exports = {
         db.get_user_cart([id])
         .then(data => res.status(200).send(data))
         .catch(err => res.status(500).send(err))
+    },
+
+    deleteFromCart: (req, res, next) => {
+        const db = req.app.get('db');
+        const {id, bookid} = req.params;
+        db.delete_from_cart([id, bookid])
+        .then(data => res.status(200).send(data))
+        .catch(err => res.status(500).send(err))
     }
 }
