@@ -50,7 +50,7 @@ class Details extends Component {
                 <div>Description: <br /> {this.state.book.description}</div>
                 <Link to={`/editbook/${this.state.book.id}`}><button>Edit</button></Link>
                 <Link to='/browse'><button onClick={() => this.deleteBook()}>Delete</button></Link>
-                <Link to='/cart'><button onClick={() => this.addToCart()}>+Add To Cart</button></Link>
+                <Link to={`/browse}`}><button onClick={() => this.addToCart()}>+Add To Cart</button></Link>
             </div>
         )
     }

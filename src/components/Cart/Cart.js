@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import BookHolder from './BookHolder/BookHolder.js';
+import Navbar from './../Navbar/Navbar.js';
 
 class Cart extends Component {
     constructor(props) {
@@ -35,6 +36,7 @@ class Cart extends Component {
         console.log('state', this.state.cart)
         return (
             <div classID='Cart'>
+            <Navbar/>
                 {this.state.cart.length ? this.state.cart.map(book => <BookHolder key={book.id} book={book}
                                                                                     deleteFromCart={this.deleteFromCart}/>): 'No items in cart.'}
             </div>

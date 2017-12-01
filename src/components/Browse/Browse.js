@@ -37,6 +37,7 @@ class Browse extends Component {
                             <div>Instock: {book.instock === true ? 'Yes' : 'No'}</div>
                             <div><img src={book.img} /></div>
                             <Link to={`/details/${book.id}`}><button>Details</button></Link>
+                            <Link to='/addbook'><button>Add New Book</button></Link>
                         </div>
                     )
                 }) : null}
