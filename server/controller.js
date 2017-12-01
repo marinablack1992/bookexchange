@@ -12,5 +12,13 @@ module.exports = {
         db.get_books()
         .then((data) => res.status(200).send(data))
         .catch((err) => res.status(500).send(console.log(err), []))
+    },
+
+    getBook: (req, res, next) => {
+        const db = req.app.get('db');
+        const {id} = req.params
+        db.get_book([id])
+        .then((data) => res.status(200).send(data))
+        .catch((err) => res.status(500).send(console.log(err), []))
     }
 }

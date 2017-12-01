@@ -15,7 +15,7 @@ export default (
         <Route component={AddBook} exact path='/addbook'/>
         <Route component={Browse} exact path='/browse'/>
         <Route component={Cart} exact path='/cart'/>
-        <Route component={Details} exact path='/details'/>
+        <Route component={Details} exact path='/details/:id'/>
         <Route component={EditBook} exact path='/editbook'/>
         <Route component={MyShelf} exact path='/shelf'/>
     </Switch>

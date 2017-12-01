@@ -88,6 +88,7 @@ passport.deserializeUser(function (id, done) { //everytime the user wants to go 
 
 app.post('/api/addbook', ctrl.addBook);
 app.get('/api/getbooks', ctrl.getBooks);
+app.get('/api/book/:id', ctrl.getBook);
 
 const PORT = 3005;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
