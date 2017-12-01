@@ -69,5 +69,13 @@ module.exports = {
         db.update_book([title, author, img, description, genre, id])
             .then(data => res.status(200).send(data))
             .catch(err => res.status(500).send(err))
+    },
+
+    addToShelf: (req, res, next) => {
+        const db = req.app.get('db');
+        const {userid, bookid} = req.params;
+        db.add_to_shelf([userid, bookid])
+        .then(data => res.status(200).send(data))
+        .catch(err => res.status(500).send(err))
     }
 }
