@@ -93,6 +93,7 @@ app.get('/api/usercart/:id', ctrl.getUserCart)
 app.post('/api/addbook', ctrl.addBook);
 
 app.delete('/api/deletebook/:id', ctrl.deleteBook)
+app.delete('/api/deletecartitem/:id/:bookid', ctrl.deleteFromCart)
 
 app.post('/api/addcart/:bookid/:userid', ctrl.addToCart)
 
