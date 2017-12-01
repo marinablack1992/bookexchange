@@ -1,5 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 import Login from './components/Login/Login.js';
 import AddBook from './components/AddBook/AddBook.js'
