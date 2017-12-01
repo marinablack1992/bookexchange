@@ -96,6 +96,7 @@ app.delete('/api/deletebook/:id', ctrl.deleteBook)
 app.delete('/api/deletecartitem/:userid/:bookid', ctrl.deleteFromCart)
 
 app.post('/api/addcart/:bookid/:userid', ctrl.addToCart)
+app.post('/api/addtoshelf/:userid/:bookid', ctrl.addToShelf)
 
 app.put('/api/updatestock/:bookid', ctrl.updateStock)
 app.put('/api/updatebook/:id', ctrl.updateBook)
