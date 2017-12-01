@@ -17,8 +17,6 @@ export function getUserInfo() {
 
     }
 }
-//reducers job is just to return a new piece of state, or if that doesn't exist, the initial state.. it's just a function.
-//state is underfined until we set it to initialState. IF STATE IS UNDEFINED, IT WILL DEFAULT TO INITIALSTATE. :)
 export default function reducer(state = initialState, action) {
     switch (action.type) {
         case GET_USER_INFO + '_FULFILLED':

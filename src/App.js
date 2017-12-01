@@ -27,5 +27,9 @@ class App extends Component {
       user: state.user,
     }
   }
+
+  const mapDispatchToProps = {
+    getUserInfo: getUserInfo
+  }
   
-  export default withRouter(connect(mapStateToProps, {getUserInfo})(App));
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps )(App));
